@@ -31,7 +31,7 @@ class LoanEditController extends Controller
             ->with('taxRates', TaxRate::getList())
             ->with('customFields', CustomField::forTable('loans')->get())
             ->with('returnUrl', $this->getReturnUrl())
-            ->with('templates', LoanTemplates::lists())
+            ->with('templates', LoanTemplates::lists());
             ->with('itemCount', count($loan->loanItems));
     }
 
